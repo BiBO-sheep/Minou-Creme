@@ -8,8 +8,8 @@
   <meta property="og:title" content="Minou Crème — Dessert Singkawang" />
   <meta property="og:description" content="Kalau lagi pengen yang manis, pilih yang kamu suka. Pesan langsung lewat WhatsApp." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="images/hero.png" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%235A3A2E'/%3E%3Ctext x='32' y='42' font-family='sans-serif' font-size='32' font-weight='700' fill='%23FDFBF7' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E" />
+  <meta property="og:image" content="assets/brand/hero.png" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%235A3A2E'/%3E%3Ctext x='32' y='42' font-family='sans-serif' font-size='32' font-weight='700' fill='%23F7F1E7' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -17,11 +17,7 @@
 <body class="bg-cream text-ink font-sans antialiased">
   <a href="#main" class="skip-link">Lewati ke konten utama</a>
 
-  <!-- One warm atmospheric glow behind the hero only (purpose: depth, not decoration). -->
-  <div aria-hidden="true" class="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[480px] rounded-full blur-[140px] opacity-60"
-       style="background: radial-gradient(closest-side, #F6EBDD, transparent)"></div>
-
-  <div class="relative mx-auto w-full max-w-site px-5 md:px-8">
+  <div class="relative mx-auto w-full max-w-[1440px] px-5 md:px-10">
 
     <!-- ============ NAVBAR ============ -->
     <header class="sticky top-3 md:top-5 z-50">
@@ -55,22 +51,19 @@
 
     <main id="main">
       <!-- ============ HERO ============ -->
-      <section id="top" class="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-8 items-center pt-12 md:pt-20 pb-14 md:pb-24">
-        <div class="md:col-span-6 flex flex-col items-start gap-5">
+      <section id="top" class="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-6 items-center pt-12 md:pt-20 pb-14 md:pb-24">
+        <div class="md:col-span-5 flex flex-col items-start gap-5">
           <p class="text-xs font-bold tracking-[0.18em] uppercase text-cocoa">Singkawang • Dessert rumahan</p>
           <h1 class="text-[2.6rem] leading-[1.05] md:text-6xl font-extrabold tracking-tight">Satisfy Your Cravings!</h1>
           <p class="text-muted text-base md:text-lg leading-relaxed max-w-md">Nikmati manisnya perpaduan Milky Sando, Bisky Cheese, dan aneka dessert lezat dari Minou Crème.</p>
-          <div class="flex flex-wrap items-center gap-4 mt-1">
-            <button id="hero-order" type="button"
-                    class="min-h-[52px] inline-flex items-center bg-ink text-white px-8 rounded-full text-base font-bold hover:bg-cocoa transition shadow-[0_12px_30px_rgba(23,23,23,0.18)]">Pesan Sekarang</button>
-            <a href="#menu" class="min-h-[52px] inline-flex items-center font-bold text-ink underline underline-offset-8 decoration-beige hover:decoration-cocoa transition">Lihat menu</a>
-          </div>
+          <button id="hero-order" type="button"
+                  class="min-h-[52px] inline-flex items-center bg-ink text-white px-8 rounded-full text-base font-bold hover:bg-cocoa transition shadow-[0_12px_30px_rgba(23,23,23,0.18)]">Pesan Sekarang</button>
           <p class="text-sm text-muted">Balas cepat lewat WhatsApp • Mulai Rp15.000</p>
         </div>
-        <div class="md:col-span-6 relative">
+        <div class="md:col-span-7 relative">
           <div aria-hidden="true" class="absolute -inset-3 md:-inset-4 bg-sand rounded-[2.2rem] rotate-2"></div>
-          <img src="images/hero.png" alt="Aneka dessert Minou Crème: Bisky Cheese, Milky Sando, dan Banana Pudding"
-               fetchpriority="high" class="relative w-full max-w-[520px] mx-auto object-cover rounded-[2rem] shadow-[0_24px_60px_rgba(90,58,46,0.18)]" />
+          <img src="assets/brand/hero.png" alt="Aneka dessert Minou Crème: Bisky Cheese, Milky Sando, dan Banana Pudding"
+               fetchpriority="high" class="relative w-full max-w-[720px] ml-auto object-cover rounded-[2rem] shadow-[0_24px_60px_rgba(90,58,46,0.18)]" />
           <p class="absolute left-5 bottom-5 bg-white/95 border border-beige rounded-full px-4 py-2 text-sm font-bold shadow-sm">Favorit buat teman ngopi</p>
         </div>
       </section>
@@ -90,42 +83,22 @@
       <!-- ============ OUR STORY (editable framework) ============ -->
       <!--
         REPLACE: heading + paragraphs below with the real Minou Crème story.
-        REPLACE: story image src with a real photo (public/images/brand/...).
+        REPLACE: story image src with a real photo (public/assets/brand/...).
         OPTIONAL: replace the <img> with <video controls src="videos/story.mp4"> when ready.
       -->
       <section id="story" class="py-14 md:py-24 scroll-mt-28" aria-labelledby="story-heading">
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-center bg-sand/60 border border-beige rounded-[2rem] p-7 md:p-14">
-          <div class="md:col-span-6 order-2 md:order-1">
-            <img src="images/products/milky-sando.png" alt="[Ganti] Foto dapur atau proses pembuatan dessert Minou Crème"
-                 loading="lazy" class="w-full aspect-[4/3] object-cover rounded-3xl" />
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-14 items-center">
+          <div class="md:col-span-7">
+            <img src="assets/products/milky-sando.png" alt="[Ganti] Foto dapur atau proses pembuatan dessert Minou Crème"
+                 loading="lazy" class="w-full aspect-[16/10] object-cover rounded-3xl" />
           </div>
-          <div class="md:col-span-6 order-1 md:order-2">
-            <p class="text-xs font-bold tracking-[0.18em] uppercase text-cocoa mb-3">Our Story</p>
+          <div class="md:col-span-5">
+            <p class="flex items-center gap-2 text-xs font-bold tracking-[0.18em] uppercase text-cocoa mb-3"><span aria-hidden="true" class="inline-block w-6 h-1 rounded-full bg-blush"></span>Our Story</p>
             <h2 id="story-heading" class="text-3xl md:text-4xl font-extrabold tracking-tight mb-4">[Ganti] Cerita Minou Crème dimulai dari dapur kecil di Singkawang.</h2>
             <p class="text-muted leading-relaxed mb-4">[Ganti paragraf 1: ceritakan awal mula Minou Crème dengan kalimat sendiri. Satu atau dua kalimat cukup.]</p>
             <p class="text-muted leading-relaxed">[Ganti paragraf 2: ceritakan apa yang dijaga sampai sekarang, misalnya rasa, bahan, atau cara melayani pembeli.]</p>
           </div>
         </div>
-      </section>
-
-      <!-- ============ WHY MINOU ============ -->
-      <section class="py-14 md:py-20" aria-labelledby="values-heading">
-        <p class="text-xs font-bold tracking-[0.18em] uppercase text-cocoa mb-2">Kenapa Minou</p>
-        <h2 id="values-heading" class="text-3xl md:text-4xl font-extrabold tracking-tight mb-8">Sederhana, manis, gampang dipesan.</h2>
-        <dl class="divide-y divide-beige border-y border-beige">
-          <div class="grid grid-cols-[auto_1fr] gap-5 py-6">
-            <dt class="text-sm font-bold text-cocoa pt-1">01</dt>
-            <div><dt class="font-bold text-lg">Taste</dt><dd class="text-muted mt-1 max-w-xl">[Tambahkan pernyataan rasa yang sebenarnya, misalnya deskripsi jujur tiap varian.]</dd></div>
-          </div>
-          <div class="grid grid-cols-[auto_1fr] gap-5 py-6">
-            <dt class="text-sm font-bold text-cocoa pt-1">02</dt>
-            <div><dt class="font-bold text-lg">Made with Care</dt><dd class="text-muted mt-1 max-w-xl">[Tambahkan cara kamu menjaga kualitas, tanpa klaim yang belum pasti.]</dd></div>
-          </div>
-          <div class="grid grid-cols-[auto_1fr] gap-5 py-6">
-            <dt class="text-sm font-bold text-cocoa pt-1">03</dt>
-            <div><dt class="font-bold text-lg">Made to Share</dt><dd class="text-muted mt-1 max-w-xl">[Tambahkan kapan dessert ini paling pas dinikmati atau dibagi.]</dd></div>
-          </div>
-        </dl>
       </section>
 
       <!-- ============ TESTIMONIALS ============ -->
@@ -153,9 +126,9 @@
         <div id="ig-grid" class="grid grid-cols-2 md:grid-cols-3 gap-4"></div>
       </section>
 
-      <!-- ============ ORDER CTA ============ -->
-      <section class="py-14 md:py-20" aria-labelledby="cta-heading">
-        <div class="bg-cocoa text-cream rounded-[2rem] px-7 py-12 md:p-16 text-center md:text-left md:flex md:items-center md:justify-between md:gap-10">
+      <!-- ============ CONTACT / FINAL CTA (one closing section) ============ -->
+      <section id="contact" class="py-14 md:py-20 scroll-mt-28" aria-labelledby="cta-heading">
+        <div class="bg-cocoa text-cream rounded-[2rem] px-7 py-12 md:p-16 md:flex md:items-center md:justify-between md:gap-10">
           <div>
             <h2 id="cta-heading" class="text-3xl md:text-5xl font-extrabold tracking-tight">Lagi pengen yang manis?</h2>
             <p class="mt-3 text-cream/80 md:text-lg">Pesan langsung dari Minou Crème. Pilih menunya, chat, beres.</p>
@@ -163,22 +136,11 @@
           <button id="cta-order" type="button"
                   class="mt-7 md:mt-0 shrink-0 min-h-[54px] inline-flex items-center bg-cream text-ink px-8 rounded-full font-bold hover:bg-white transition">Pesan via WhatsApp</button>
         </div>
-      </section>
-
-      <!-- ============ CONTACT ============ -->
-      <section id="contact" class="py-14 md:py-20 scroll-mt-28" aria-labelledby="contact-heading">
-        <p class="text-xs font-bold tracking-[0.18em] uppercase text-cocoa mb-2">Contact</p>
-        <h2 id="contact-heading" class="text-3xl md:text-4xl font-extrabold tracking-tight mb-8">Hubungi Minou Crème.</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mt-5">
           <div class="bg-white border border-beige rounded-3xl p-7">
             <p class="font-bold mb-1">WhatsApp</p>
-            <p class="text-muted text-sm mb-4">Cara tercepat untuk pesan.</p>
+            <p class="text-muted text-sm mb-4">Cara tercepat untuk pesan dan bertanya.</p>
             <a id="wa-contact" href="https://wa.me/6281250664909" target="_blank" rel="noopener" class="font-bold text-cocoa underline underline-offset-4">0812 5066 4909</a>
-          </div>
-          <div class="bg-white border border-beige rounded-3xl p-7">
-            <p class="font-bold mb-1">Instagram</p>
-            <p class="text-muted text-sm mb-4">Lihat foto dan kabar terbaru.</p>
-            <a data-ig-link href="#instagram" class="font-bold text-cocoa underline underline-offset-4">@minoucreme [ganti URL di config.js]</a>
           </div>
           <div class="bg-white border border-beige rounded-3xl p-7">
             <p class="font-bold mb-1">Lokasi</p>
@@ -189,29 +151,17 @@
       </section>
     </main>
 
-    <!-- ============ FOOTER ============ -->
+    <!-- ============ FOOTER (compact: brand + essentials + legal) ============ -->
     <footer class="mt-4 mb-8 bg-ink text-white rounded-[2rem] px-7 py-10 md:p-12">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="flex flex-col md:flex-row md:items-center gap-6 md:justify-between">
         <div>
           <p class="text-lg font-extrabold">Minou Crème</p>
           <p class="text-white/60 text-sm mt-2 max-w-xs">Dessert rumahan dari Singkawang. Bisky Cheese, Milky Sando, Banana Pudding.</p>
         </div>
-        <nav aria-label="Navigasi footer">
-          <p class="text-sm font-bold text-white/50 mb-3">Jelajah</p>
-          <ul class="space-y-1 text-sm font-semibold">
-            <li><a href="#menu" class="inline-flex min-h-[36px] items-center hover:underline underline-offset-4">Menu</a></li>
-            <li><a href="#story" class="inline-flex min-h-[36px] items-center hover:underline underline-offset-4">Our Story</a></li>
-            <li><a href="#testimonials" class="inline-flex min-h-[36px] items-center hover:underline underline-offset-4">Reviews</a></li>
-            <li><a href="#contact" class="inline-flex min-h-[36px] items-center hover:underline underline-offset-4">Contact</a></li>
-          </ul>
-        </nav>
-        <div>
-          <p class="text-sm font-bold text-white/50 mb-3">Hubungi</p>
-          <ul class="space-y-1 text-sm font-semibold">
-            <li><a href="https://wa.me/6281250664909" target="_blank" rel="noopener" class="inline-flex min-h-[36px] items-center hover:underline underline-offset-4">WhatsApp</a></li>
-            <li><a data-ig-link href="#instagram" class="inline-flex min-h-[36px] items-center hover:underline underline-offset-4">Instagram</a></li>
-          </ul>
-        </div>
+        <ul class="flex flex-wrap gap-x-6 gap-y-2 text-sm font-semibold">
+          <li><a href="https://wa.me/6281250664909" target="_blank" rel="noopener" class="inline-flex min-h-[44px] items-center hover:underline underline-offset-4">WhatsApp</a></li>
+          <li><a data-ig-link href="#instagram" class="inline-flex min-h-[44px] items-center hover:underline underline-offset-4">Instagram</a></li>
+        </ul>
       </div>
       <div class="border-t border-white/15 mt-8 pt-6 text-sm text-white/60">© <span id="year">2026</span> Minou Crème Singkawang. All rights reserved.</div>
     </footer>

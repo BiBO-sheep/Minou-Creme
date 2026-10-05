@@ -5,9 +5,9 @@ Products: Bisky Cheese (Rp20.000), Milky Sando (Rp15.000), Banana Pudding (Rp15.
 
 ## Design direction
 
-Warm, clean, premium-but-approachable editorial. Cream paper background, cocoa accent,
-product photos as the hero. Restraint over effects: one glow, solid cards, MOTION 1
-(hover + smooth scroll + reduced-motion support).
+Warm, clean, premium-but-approachable editorial. Warm oat paper background, cocoa accent,
+product photos as the hero. Restraint over effects: solid cards, no page-wide
+glow, MOTION 1 (hover + smooth scroll + reduced-motion support).
 
 ## Tech stack
 
@@ -33,7 +33,8 @@ src/whatsapp.js       # openWhatsApp(message) with encodeURIComponent
 src/data/products.js  # EDIT HERE: products
 src/data/testimonials.js # EDIT HERE: real testimonials (empty = honest empty state)
 src/data/instagram.js # EDIT HERE: 6 IG slots
-public/images/        # hero.png + products/*.png (copied from original assests/)
+public/assets/      # canonical web images: brand/hero.png + products/*.png (copied from original assests/, which is kept untouched until paths verified)
+public/videos/        # story video goes here when ready
 ```
 
 ## Where to edit things
@@ -43,7 +44,7 @@ public/images/        # hero.png + products/*.png (copied from original assests/
 | WhatsApp number | `src/config.js` → `WHATSAPP_NUMBER` (all buttons follow) |
 | Instagram URL | `src/config.js` → `INSTAGRAM_URL` (section + contact + footer follow) |
 | Products | `src/data/products.js` (name, price, image, alt, waMessage) |
-| Story text/photo | `index.html` `#story` (marked `REPLACE`), photo in `public/images/brand/` |
+| Story text/photo | `index.html` `#story` (marked `REPLACE`), brand photo in `public/assets/brand/` |
 | Testimonials | `src/data/testimonials.js` (name, username, quote, image/video, instagramUrl) |
 | Instagram slots | `src/data/instagram.js` (image path + post url per slot) |
 | Location/brand | `src/config.js` |

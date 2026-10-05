@@ -7,7 +7,7 @@
 //   name: 'Nama Pelanggan',
 //   username: '@instagram',
 //   quote: 'Kata mereka, apa adanya.',
-//   image: 'images/testimonials/nama.jpg', // optional, omit if none
+//   image: 'assets/testimonials/nama.jpg', // optional, omit if none (put file in public/assets/testimonials/)
 //   video: '',                              // optional mp4 path
 //   instagramUrl: 'https://instagram.com/...' // optional
 // }
