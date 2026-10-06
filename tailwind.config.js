@@ -4,16 +4,26 @@ export default {
   theme: {
     extend: {
       colors: {
-        cream: '#F7F1E7',
-        sand: '#F6EBDD',
-        beige: '#EADCCB',
-        blush: '#F2D1CB',
-        cocoa: '#5A3A2E',
-        ink: '#171717',
-        muted: '#5F5A55'
+        cream: {
+          DEFAULT: '#FFF6E5',
+          soft: '#FBF7EC'
+        },
+        navy: '#041159',
+        royal: {
+          light: '#1A2BAF',
+          DEFAULT: '#0C1C87',
+          dark: '#081360'
+        },
+        cherry: {
+          DEFAULT: '#930F1F',
+          dark: '#7A0C19'
+        },
+        rose: '#936374'
       },
       fontFamily: {
-        sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif']
+        sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+        display: ['Montserrat', 'system-ui', 'sans-serif'],
+        script: ['"Great Vibes"', 'cursive']
       },
       maxWidth: {
         site: '1200px'

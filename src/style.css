@@ -2,24 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Base: warm paper background, ink text. One decision: cream keeps
-   product photos warm; pure white would feel clinical for a dessert brand. */
+/* Base: cream page, navy text, blue headings. Red is reserved for CTAs
+   and small accents; display font carries the brand's poster look. */
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: #f7f1e7;
-  color: #171717;
+  background-color: #FFF6E5;
+  color: #041159;
   font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
-/* Visible keyboard focus everywhere. Never remove outline without a replacement (R-32). */
+/* Hero: Minou Blue lifting into Deep Navy (brand blues only, no foreign
+   hue) so the cream display type stays readable over any hero photo. */
+.hero-bg {
+  background:
+    radial-gradient(120% 90% at 50% 0%, #1A2BAF 0%, #0C1C87 45%, #041159 100%),
+    #0C1C87;
+}
+
+/* Visible keyboard focus everywhere. Red reads on cream and soft-cream;
+   dark surfaces (hero, tiles, red band, navy footer, navbar) switch the
+   ring to cream — red-on-navy fails the 3:1 focus contrast. */
 :focus-visible {
-  outline: 3px solid #5a3a2e;
+  outline: 3px solid #930F1F;
   outline-offset: 3px;
   border-radius: 6px;
+}
+
+header :focus-visible,
+.hero-bg :focus-visible,
+#menu article :focus-visible,
+#subscribe :focus-visible,
+footer :focus-visible {
+  outline-color: #FFF6E5;
 }
 
 .skip-link {
@@ -27,12 +45,12 @@ body {
   left: 1rem;
   top: -100px;
   z-index: 60;
-  background: #111;
-  color: #fff;
+  background: #930F1F;
+  color: #FFF6E5;
   padding: 0.65rem 1.1rem;
   border-radius: 999px;
   font-size: 0.875rem;
-  font-weight: 600;
+  font-weight: 700;
   transition: top 0.2s ease;
 }
 
@@ -40,18 +58,23 @@ body {
   top: 1rem;
 }
 
+/* Navbar: translucent over the hero, solid Minou Blue after scroll. */
+#navbar.is-scrolled {
+  background-color: rgba(12, 28, 135, 0.94);
+  border-color: rgba(255, 246, 229, 0.25);
+  box-shadow: 0 12px 34px rgba(4, 17, 89, 0.35);
+}
+
 /* Subtle image treatment: photos stay the hero, no filters. */
 .food-img {
-  background-color: #f6ebdd;
+  background-color: #041159;
 }
 
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
-  *,
-  *::before,
-  *::after {
+  *, *::before, *::after {
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
   }
