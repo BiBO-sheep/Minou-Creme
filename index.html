@@ -17,6 +17,11 @@
   <meta name="theme-color" content="#FFF6E5" />
   <meta name="robots" content="index, follow" />
   <meta name="author" content="Minou Crème" />
+  <style>
+    /* Critical CSS untuk mencegah Layout Shift (CLS) / FOUC sebelum Tailwind dimuat */
+    img { max-width: 100%; height: auto; }
+    .hero-bg { background-color: #0C1C87; } /* Warna dasar hero */
+  </style>
   <script type="module" src="/src/main.js"></script>
 </head>
 <body class="bg-cream text-navy font-sans antialiased">
@@ -27,7 +32,7 @@
     <nav id="navbar" aria-label="Navigasi utama"
          class="mx-auto w-full max-w-[1280px] flex items-center justify-between gap-4 rounded-full border border-white/10 bg-navy/55 backdrop-blur-md pl-6 pr-2 py-2">
       <a href="#top" class="flex items-center shrink-0" aria-label="Minou Crème, kembali ke atas">
-        <img src="assets/brand/logo.png" alt="Minou Crème" class="h-10 md:h-11 w-auto" />
+        <img src="assets/brand/logo.png" alt="Minou Crème" class="h-10 md:h-11 w-auto" width="120" height="40" style="height: 40px; width: auto;" />
       </a>
       <div class="hidden md:flex items-center gap-8 text-sm font-bold uppercase tracking-widest text-cream/90">
         <a href="#menu" class="hover:text-cream hover:underline underline-offset-8 decoration-2 decoration-cream transition min-h-[44px] inline-flex items-center">Menu</a>
@@ -78,6 +83,7 @@
         <div class="relative lg:col-start-2 lg:row-start-1 lg:row-span-2 flex justify-center">
           <img src="assets/brand/hero.png" alt="Aneka dessert Minou Crème: Bisky Cheese, Milky Sando, dan Banana Pudding"
                fetchpriority="high"
+               width="720" height="850"
                class="w-full max-w-[720px] lg:max-w-none lg:h-[min(64vh,660px)] object-cover rounded-[1.5rem] border border-white/10 shadow-[0_30px_80px_rgba(4,17,89,0.55)]" />
           <!-- Sticker badges: real facts (price, daily bake) placed on the
                photo so the hero reads full instead of empty. -->
@@ -107,7 +113,8 @@
             Cerita<br />Kami
           </h2>
           <img src="assets/products/milky-sando.png" alt="Milky Sando Minou Crème, salah satu dessert buatan kami"
-               loading="lazy" class="mt-7 w-full aspect-[16/10] object-cover rounded-3xl border-4 border-navy/10 shadow-[0_18px_40px_rgba(4,17,89,0.18)]" />
+               loading="lazy" width="800" height="500"
+               class="mt-7 w-full aspect-[16/10] object-cover rounded-3xl border-4 border-navy/10 shadow-[0_18px_40px_rgba(4,17,89,0.18)]" />
         </div>
         <div class="md:col-span-7">
           <p class="text-xs font-bold tracking-[0.2em] uppercase text-cherry mb-4">Our Story</p>
